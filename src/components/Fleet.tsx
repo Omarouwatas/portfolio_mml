@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { fleet } from "../data/site";
+import { Plus } from "lucide-react";
+import { fleet, fleetMore } from "../data/site";
 import { Eyebrow } from "./ui";
 
 export default function Fleet() {
@@ -62,6 +63,23 @@ export default function Fleet() {
               </div>
             </motion.article>
           ))}
+        </div>
+
+        {/* Reste du parc — sans visuel dédié */}
+        <div className="mt-10 flex flex-col gap-4 border-t border-dashed border-ink/20 pt-6 sm:flex-row sm:items-center">
+          <span className="mono-label flex shrink-0 items-center gap-2 text-rust">
+            <Plus size={13} /> Également au parc
+          </span>
+          <ul className="flex flex-wrap gap-2">
+            {fleetMore.map((m) => (
+              <li
+                key={m}
+                className="rounded-sm border border-ink/15 bg-sand-2/50 px-3 py-1.5 font-mono text-[0.7rem] tracking-wide text-ink/75"
+              >
+                {m}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

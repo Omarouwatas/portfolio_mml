@@ -11,12 +11,12 @@ export default function Hero() {
       {/* Image de terrain — la machine dans la dune */}
       <div className="absolute inset-0">
         <img
-          src="/img/hero-loader-dune.webp"
-          alt="Chargeuse MML en opération dans le Sahara mauritanien"
-          className="h-full w-full object-cover"
+          src="/img/hero-team.webp"
+          alt="Équipe MML en EPI sur un site de forage dans le Sahara mauritanien"
+          className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-basalt via-basalt/85 to-basalt/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-basalt via-transparent to-basalt/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-basalt via-basalt/80 to-basalt/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-basalt/85 via-basalt/5 to-basalt" />
       </div>
 
       {/* Courbes de niveau */}

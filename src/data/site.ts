@@ -114,74 +114,83 @@ export const services = [
   },
 ];
 
-/* Flotte — présentée comme une fiche technique (spec-sheet) */
+/* Flotte — engins réels de MML, présentés comme une fiche technique (spec-sheet) */
 export const fleet = [
   {
-    ref: "GR-160",
-    name: "Niveleuse CAT 160H",
-    cat: "Terrassement",
-    image: "/img/grader.webp",
-    specs: [
-      ["Usage", "Nivellement · pistes"],
-      ["Lame", "Réglable VHP"],
-      ["Terrain", "Désert · piste"],
-    ],
-  },
-  {
-    ref: "CP-563",
-    name: "Compacteur CAT CS-563",
-    cat: "Compactage",
-    image: "/img/compactor.webp",
-    specs: [
-      ["Usage", "Plateformes · voirie"],
-      ["Cylindre", "Vibrant lisse"],
-      ["Terrain", "Sol · remblai"],
-    ],
-  },
-  {
-    ref: "EX-325",
-    name: "Pelle CAT 325C",
+    ref: "PE-325C",
+    name: "Pelle Caterpillar 325C",
     cat: "Excavation",
     image: "/img/excavator-325.jpeg",
     specs: [
       ["Usage", "Excavation · chargement"],
-      ["Type", "Chenilles"],
-      ["Terrain", "Tous terrains"],
+      ["Marque", "Caterpillar"],
+      ["Type", "Sur chenilles"],
     ],
   },
   {
-    ref: "HW-VRAC",
-    name: "Bennes HOWO",
+    ref: "CH-SD300",
+    name: "Chargeuse DEVELON SD300",
+    cat: "Chargement",
+    image: "/img/hero-loader.webp",
+    specs: [
+      ["Usage", "Chargement · reprise"],
+      ["Marque", "DEVELON"],
+      ["Type", "Sur pneus"],
+    ],
+  },
+  {
+    ref: "NV-160H",
+    name: "Niveleuse Grader 160H",
+    cat: "Nivellement",
+    image: "/img/grader.webp",
+    specs: [
+      ["Usage", "Nivellement · pistes"],
+      ["Lame", "VHP réglable"],
+      ["Type", "Automotrice"],
+    ],
+  },
+  {
+    ref: "CP-563",
+    name: "Compacteur Caterpillar CS-563",
+    cat: "Compactage",
+    image: "/img/compactor.webp",
+    specs: [
+      ["Usage", "Plateformes · voirie"],
+      ["Marque", "Caterpillar"],
+      ["Cylindre", "Vibrant lisse"],
+    ],
+  },
+  {
+    ref: "CT-15T",
+    name: "Camion citerne Gasoil 15T",
+    cat: "Ravitaillement",
+    image: "/img/tanker.webp",
+    specs: [
+      ["Usage", "Gasoil · ravitaillement"],
+      ["Capacité", "15 tonnes"],
+      ["Config", "Citerne routière"],
+    ],
+  },
+  {
+    ref: "BN-HOWO",
+    name: "Camion benne HOWO",
     cat: "Transport vrac",
     image: "/img/trucks-howo.webp",
     specs: [
       ["Usage", "Vrac · agrégats"],
+      ["Marque", "HOWO"],
       ["Config", "6×4 robuste"],
-      ["Terrain", "Longue distance"],
     ],
   },
-  {
-    ref: "CIT-EAU",
-    name: "Camion-citerne",
-    cat: "Eau & carburant",
-    image: "/img/tanker.webp",
-    specs: [
-      ["Usage", "Eau · carburant"],
-      ["Cuve", "Grande capacité"],
-      ["Terrain", "Ravitaillement site"],
-    ],
-  },
-  {
-    ref: "LD-DUNE",
-    name: "Chargeuse sur pneus",
-    cat: "Chargement",
-    image: "/img/loader-sand.jpeg",
-    specs: [
-      ["Usage", "Chargement · reprise"],
-      ["Godet", "Polyvalent"],
-      ["Terrain", "Sable · dune"],
-    ],
-  },
+];
+
+/* Le reste du parc, sans visuel dédié — listé en complément sous le catalogue. */
+export const fleetMore = [
+  "Chargeuse Caterpillar 950G",
+  "Camion benne tandem (deux ponts arrière)",
+  "Porte-char HOWO 371",
+  "Toyota GX",
+  "Toyota Hilux",
 ];
 
 /* Chantiers — « journal de terrain » avec coordonnées et dates réelles */
