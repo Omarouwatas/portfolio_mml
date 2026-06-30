@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   MML — « Dossier de terrain »
+   Palette désert chaud + bleu de marque. Typo technique-industrielle.
+   ========================================================================== */
+@theme {
+  /* Encre & nuit chaude */
+  --color-basalt: #1c1a17;
+  --color-basalt-2: #232019;
+  --color-basalt-3: #2c2820;
+
+  /* Sable */
+  --color-sand: #ece3d0;
+  --color-sand-2: #e2d6bd;
+  --color-dune: #c9b289;
+  --color-dune-deep: #a8916a;
+
+  /* Accents */
+  --color-cobalt: #1b49a0;
+  --color-cobalt-bright: #2f6ad6;
+  --color-rust: #b4471f;
+  --color-rust-deep: #8a3414;
+
+  /* Texte */
+  --color-ink: #211d16;
+  --color-haze: #6e6354;
+  --color-haze-light: #b8ac96;
+  --color-faint: #8a8472;
+
+  /* Lignes */
+  --color-line: #1c1a1714;
+  --color-line-strong: #1c1a1726;
+  --color-line-night: #ffffff14;
+  --color-line-night-strong: #ffffff24;
+
+  --font-display: "Archivo Expanded", "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  --radius-card: 0.25rem;
+}
+
+/* ----------------------------------------------------------------------------
+   Base
+---------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-sand);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-cobalt);
+    color: var(--color-sand);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 0.98;
+  }
+
+  ::-webkit-scrollbar { width: 11px; }
+  ::-webkit-scrollbar-track { background: var(--color-basalt); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-dune-deep);
+    border: 3px solid var(--color-basalt);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-dune); }
+}
+
+/* ----------------------------------------------------------------------------
+   Layout
+---------------------------------------------------------------------------- */
+@utility container-x {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ----------------------------------------------------------------------------
+   Signature — courbes de niveau topographiques (relevé géologique)
+---------------------------------------------------------------------------- */
+.contours {
+  background-image: repeating-radial-gradient(
+    ellipse 120% 80% at 70% 30%,
+    transparent 0,
+    transparent 38px,
+    currentColor 38px,
+    currentColor 39px
+  );
+}
+
+/* Texture sable très légère (grain) */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* ----------------------------------------------------------------------------
+   Type helpers
+---------------------------------------------------------------------------- */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.display-tight {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+/* Filet de coupe — tirets type carte de relevé */
+.rule-dash {
+  background-image: repeating-linear-gradient(
+    90deg,
+    currentColor 0,
+    currentColor 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* ----------------------------------------------------------------------------
+   Motion
+---------------------------------------------------------------------------- */
+@keyframes ticker {
+  to { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-ticker { animation: none; }
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-cobalt-bright);
+  outline-offset: 3px;
+}
