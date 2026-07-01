@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, ArrowRight, Check } from "lucide-react";
+import { Phone, Mail, MapPin, Check } from "lucide-react";
 import { contact, company } from "../data/site";
 import { Eyebrow, Contours } from "./ui";
 
@@ -53,7 +53,7 @@ export default function Contact() {
               <MapPin size={18} className="text-rust" />
               <span className="flex flex-col">
                 <span className="mono-label text-[0.6rem] text-haze">Base</span>
-                <span className="font-mono text-sm text-sand">{company.city}</span>
+                <span className="font-mono text-sm text-sand">{company.address}</span>
               </span>
             </div>
           </div>
@@ -102,7 +102,6 @@ export default function Contact() {
                 className="group mt-2 inline-flex items-center justify-center gap-2.5 rounded-sm bg-cobalt px-6 py-3.5 text-sm font-semibold text-sand transition-colors hover:bg-cobalt-bright"
               >
                 {contact.fields.submit}
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
             </form>
           )}

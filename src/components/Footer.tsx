@@ -48,7 +48,7 @@ export default function Footer() {
                   {company.email}
                 </a>
               </li>
-              <li className="text-haze-light/80">{company.city}</li>
+              <li className="text-haze-light/80">{company.address}</li>
             </ul>
           </div>
         </div>

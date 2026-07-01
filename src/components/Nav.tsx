@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav, company } from "../data/site";
 
 export default function Nav() {
@@ -41,7 +41,7 @@ export default function Nav() {
                 scrolled ? "text-haze" : "text-haze-light/80"
               }`}
             >
-              {company.tagline}
+              {company.legal}
             </span>
           </span>
         </a>
@@ -70,7 +70,6 @@ export default function Nav() {
           }`}
         >
           Devis
-          <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5" />
         </a>
 
         <button
@@ -104,7 +103,6 @@ export default function Nav() {
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-sm bg-cobalt px-5 py-3.5 text-sm font-semibold text-sand"
             >
               Demander un devis
-              <ArrowUpRight size={16} />
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
 import { hero, ticker, company } from "../data/site";
 import { Button, Contours } from "./ui";
 
@@ -84,7 +84,6 @@ export default function Hero() {
           >
             <Button href="#contact">
               {hero.ctaPrimary}
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Button>
             <a
               href="#flotte"

@@ -27,22 +27,22 @@ export default function Fleet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.07 }}
-              className="group flex flex-col overflow-hidden rounded-sm border border-ink/10 bg-sand-2/40 transition-all duration-300 hover:border-ink/25 hover:shadow-[0_20px_50px_-25px_rgba(28,26,23,0.5)]"
+              className="group flex flex-col overflow-hidden rounded-xl border-2 border-orange-500/25 bg-white transition-all duration-300 hover:border-orange-500/55 hover:shadow-[0_20px_50px_-28px_rgba(28,26,23,0.42)]"
             >
               {/* En-tête fiche */}
-              <div className="flex items-center justify-between border-b border-dashed border-ink/15 px-4 py-2.5">
-                <span className="font-mono text-xs font-semibold tracking-[0.15em] text-cobalt">
+              <div className="flex items-center justify-between border-b border-dashed border-orange-500/25 px-4 py-2.5">
+                <span className="font-mono text-xs font-semibold tracking-[0.15em] text-rust">
                   {f.ref}
                 </span>
                 <span className="mono-label text-[0.6rem] text-haze">{f.cat}</span>
               </div>
 
               {/* Image */}
-              <div className="relative h-44 overflow-hidden bg-basalt">
+              <div className="relative h-52 overflow-hidden bg-[#e2d6bd] p-5">
                 <img
                   src={f.image}
                   alt={f.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-contain drop-shadow-[0_18px_22px_rgba(28,26,23,0.24)] transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -51,7 +51,7 @@ export default function Fleet() {
                 <h3 className="font-display text-base font-extrabold uppercase tracking-tight text-ink">
                   {f.name}
                 </h3>
-                <dl className="mt-4 space-y-2 border-t border-ink/10 pt-4">
+                <dl className="mt-4 space-y-2 border-t border-orange-500/20 pt-4">
                   {f.specs.map(([k, v]) => (
                     <div key={k} className="flex items-baseline justify-between gap-3">
                       <dt className="mono-label text-[0.6rem] text-haze">{k}</dt>
@@ -74,7 +74,7 @@ export default function Fleet() {
             {fleetMore.map((m) => (
               <li
                 key={m}
-                className="rounded-sm border border-ink/15 bg-sand-2/50 px-3 py-1.5 font-mono text-[0.7rem] tracking-wide text-ink/75"
+                className="rounded-lg border border-orange-500/30 bg-white px-3 py-1.5 font-mono text-[0.7rem] tracking-wide text-ink/75"
               >
                 {m}
               </li>

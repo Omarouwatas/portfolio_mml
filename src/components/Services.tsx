@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { services } from "../data/site";
 import { Eyebrow } from "./ui";
 
@@ -49,10 +48,6 @@ export default function Services() {
                   <h3 className="font-display text-xl font-extrabold uppercase tracking-tight text-sand">
                     {s.title}
                   </h3>
-                  <ArrowUpRight
-                    size={20}
-                    className="shrink-0 text-haze-light transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-rust"
-                  />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-haze-light">{s.text}</p>
 
