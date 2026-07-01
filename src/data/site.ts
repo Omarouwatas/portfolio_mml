@@ -7,6 +7,9 @@ import develon from "../../assets/flottes/DEVELON.png";
 import niveleuse from "../../assets/flottes/niveleuse.png";
 import pelle325C from "../../assets/flottes/pelle325C.png";
 import portChar from "../../assets/flottes/port_char.png";
+import serviceEquipment from "../../assets/nos-projets/DEVELON.png";
+import serviceExecution from "../../assets/nos-projets/Execution.png";
+import servicePublicWorks from "../../assets/nos-projets/sousTraitance.png";
 import tijiritOneCamp from "../../assets/nos-projets/WhatsApp-Image-2026-02-20-at-9.29.12-AM-768x432.jpeg";
 import tijiritOneTeam from "../../assets/nos-projets/WhatsApp-Image-2026-02-20-at-9.29.12-AM-1-768x576.jpeg";
 import tijiritOneConvoy from "../../assets/nos-projets/WhatsApp-Image-2026-02-20-at-9.29.12-AM-2-768x576.jpeg";
@@ -116,21 +119,21 @@ export const services = [
   {
     code: "SVC·02",
     title: "Location d'équipements",
-    image: "/assets/nos-projets/DEVELON.png",
+    image: serviceEquipment,
     text: "MML met à disposition une flotte de véhicules et d'équipements lourds prête à être déployée selon les besoins de chaque projet, avec entretien régulier et conformité technique.",
     items: ["Véhicules", "Engins lourds", "Déploiement rapide", "Maintenance suivie"],
   },
   {
     code: "SVC·03",
     title: "Sous-traitance",
-    image: "/assets/nos-projets/execution.png",
+    image: serviceExecution,
     text: "Nous exécutons des études et travaux en sous-traitance dans plusieurs secteurs du développement en Mauritanie, en appui de partenaires nationaux et internationaux.",
     items: ["Études", "Travaux", "Partenariats", "Projets multisecteurs"],
   },
   {
     code: "SVC·04",
     title: "Travaux publics",
-    image: "/assets/nos-projets/sousTraitance.png",
+    image: servicePublicWorks,
     text: "MML intervient sur les travaux de terrassement, préparatoires, assainissement et projets TP de petite ou moyenne taille, avec respect des délais et standards qualité.",
     items: ["Terrassement", "Assainissement", "Digues & barrages", "Balisage routier"],
   },
@@ -329,5 +332,5 @@ export const footer = {
   blurb:
     "Mauritanian Mining Logistics. Location d'engins, transport routier, travaux publics et logistique de projet à travers la Mauritanie.",
   rights: "Tous droits réservés.",
-  credit: "Conception & développement — Chinguiti Labs",
+  credit: "développer par  — Chinguiti Labs",
 };
